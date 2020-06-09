@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-style">
+	<h1>Sign Up</h1>
+	<form class="site-form" action="." method="post">
+		{% csrf_token %}
+		{{ form }}
+		<br><br>
+		<input class="submit" type="submit" value="Sign Up">
+
+	</form>
+</div>
+<script type="text/javascript">
+	document.getElementsByTagName("span")[0].innerHTML="";
+	document.getElementsByTagName("span")[1].innerHTML="";
+</script>
+{% endblock %}
