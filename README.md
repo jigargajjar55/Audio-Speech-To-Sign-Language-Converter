@@ -7,6 +7,8 @@ A web application which takes in live audio speech recording as input, converts 
 >- A 3D animation of a character created
 using Blender 3D tool.
 
+Project Demo Video: https://youtu.be/YiHhD0QGrno
+
 
 ## Prerequisites
 
