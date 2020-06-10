@@ -12,12 +12,12 @@ using Blender 3D tool.
 
 >- Python >= 3.7
 >- Browser supports Web Speech API
->- Download all required packages for running python script A2SL/views.py
+>- Download all required packages for python script A2SL/views.py
 
 
 ## Installation Guide:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you download the project and running on your local machine for development and testing purposes.
 
 
 ### Instructions
