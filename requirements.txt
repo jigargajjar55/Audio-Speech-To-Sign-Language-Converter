@@ -6,3 +6,4 @@ nltk==3.7
 regex==2022.10.31
 sqlparse==0.4.3
 tqdm==4.64.1
+setuptools==67.8.0
