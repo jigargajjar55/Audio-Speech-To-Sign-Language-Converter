@@ -8,5 +8,5 @@ setuptools.setup(
     author_email='jigargajjar.55jg@gmail.com',
     url='https://github.com/jigargajjar55/Audio-Speech-To-Sign-Language-Converter',
     packages=setuptools.find_packages(),
-    setup_requires=['nltk', 'joblib','asgiref','click','regex','sqlparse'],
+    setup_requires=['nltk', 'joblib','asgiref','click','regex','sqlparse','setuptools'],
 )
