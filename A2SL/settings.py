@@ -14,7 +14,14 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# Below code added by RanjeetKumbhar01
+import nltk
+NLTK_DATA_DIR = os.path.join(BASE_DIR, 'nltk_data')
+nltk.data.path.append(NLTK_DATA_DIR)
+# download nltk utilities
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
