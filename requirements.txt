@@ -5,5 +5,5 @@ joblib==1.2.0
 nltk==3.9.4
 regex==2022.10.31
 sqlparse>=0.4.4
-tqdm==4.64.1
+tqdm==4.66.3
 setuptools==78.1.1
