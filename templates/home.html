@@ -1,13 +1,91 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
-<video width="500" height="380" class="center" autoplay loop>
-  <source src= "{% static 'Hello.mp4' %}" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-	<div class="form-style" align="middle" >
-	<a href="{% url 'animation' %}"><button class="button">Click to Start</button></a>
-	</div>
+<!-- Hero Section -->
+<section class="hero-section fade-in">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-bolt"></i> The Future of Accessibility
+        </div>
+        <h1 class="hero-title">Break the <span class="gradient-text">Barrier</span> with SignSpeak</h1>
+        <p class="hero-subtitle">
+            Instantly transform spoken words into stunning, accurate Indian Sign Language animations. 
+            Empowering communication for everyone, everywhere.
+        </p>
+        <div class="hero-cta">
+            <a href="{% url 'animation' %}" class="btn btn-primary hero-btn">
+                <i class="fas fa-magic"></i> Start Converting Now
+            </a>
+            <a href="#features" class="btn btn-secondary hero-btn">
+                <i class="fas fa-compass"></i> Explore Features
+            </a>
+        </div>
+    </div>
+    
+    <div class="hero-visual">
+        <div class="video-mockup card">
+            <div class="mockup-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <video width="100%" height="auto" class="mockup-video" autoplay loop muted playsinline>
+                <source src="{% static 'videos/Hello.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="mockup-caption">
+                <i class="fas fa-closed-captioning"></i> Output: "Hello"
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="floating-badge badge-1"><i class="fas fa-check-circle text-success"></i> 99% Accuracy</div>
+        <div class="floating-badge badge-2"><i class="fas fa-bolt text-warning"></i> Lightning Fast</div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section fade-in" style="animation-delay: 0.3s;">
+    <div class="text-center mb-4">
+        <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Why choose SignSpeak?</h2>
+        <p style="color: var(--text-secondary);">Enterprise-grade technology packaged in a beautiful interface.</p>
+    </div>
+    
+    <div class="features-grid">
+        <div class="feature-card card hover-glow">
+            <div class="feature-icon bg-gradient-1">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <h3>Voice Recognition</h3>
+            <p>Speak naturally into your microphone and let our advanced speech recognition seamlessly convert your spoken words into text instantly.</p>
+        </div>
+
+        <div class="feature-card card hover-glow">
+            <div class="feature-icon bg-gradient-2">
+                <i class="fas fa-language"></i>
+            </div>
+            <h3>ISL Dictionary</h3>
+            <p>Powered by a comprehensive library of accurate Indian Sign Language video animations meticulously mapped to NLP keywords.</p>
+        </div>
+
+        <div class="feature-card card hover-glow">
+            <div class="feature-icon bg-gradient-3">
+                <i class="fas fa-film"></i>
+            </div>
+            <h3>Seamless Stitching</h3>
+            <p>Our backend engine seamlessly concatenates individual sign videos into a single fluid stream using high-speed MoviePy encoding.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section card fade-in text-center" style="animation-delay: 0.6s; margin-top: 4rem; padding: 4rem 2rem;">
+    <h2>Ready to bridge the gap?</h2>
+    <p class="mb-3" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+        Join thousands of users breaking down communication barriers every day.
+    </p>
+    <a href="{% url 'animation' %}" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+        Try it for free
+    </a>
+</section>
 {% endblock %}

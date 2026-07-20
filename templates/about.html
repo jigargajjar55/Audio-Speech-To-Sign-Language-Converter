@@ -1,19 +1,62 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h2>VERSION 1.0.0</h2>
- 	<hr>
-	<h2>We are just a bunch of Enthusiastic people,who wants to help The Society.</h2>
-	<hr>
- 	<h2>Our Creator Team:</h2>
- 	<hr>
- 	<ul class="td">
-		<li>JIGAR GAJJAR</li>
-		<li>ASHISH BAVALIYA</li>
-		<li>DHAIRYA GADANI</li>
- 		<li>NILKANTH PATADIYA</li>
-  	</ul>
-	<hr>
-	<p class="td">Thank you, For visiting our website</p>
+<div class="fade-in" style="max-width: 800px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-title text-center" style="justify-content: center; flex-direction: column;">
+            <i class="fas fa-users" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h2>About Us</h2>
+        </div>
+        
+        <div class="text-center mb-4">
+            <span style="background-color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">VERSION 1.0.0</span>
+        </div>
+        
+        <div class="mb-4 text-center">
+            <h3 style="color: var(--text-secondary); font-weight: 400; line-height: 1.6;">
+                We are just a bunch of enthusiastic people who want to help the society.
+            </h3>
+        </div>
+        
+        <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0,0,0,0), var(--border-color), rgba(0,0,0,0)); margin: 2rem 0;">
+        
+        <div class="mt-4">
+            <h3 class="mb-3 text-center" style="color: var(--accent-color);">Our Creator Team</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight);">
+                        <i class="fas fa-user" style="font-size: 1.5rem; color: var(--text-secondary);"></i>
+                    </div>
+                    <h4 style="margin: 0;">Jigar Gajjar</h4>
+                </div>
+                
+                <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight);">
+                        <i class="fas fa-user" style="font-size: 1.5rem; color: var(--text-secondary);"></i>
+                    </div>
+                    <h4 style="margin: 0;">Ashish Bavaliya</h4>
+                </div>
+                
+                <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight);">
+                        <i class="fas fa-user" style="font-size: 1.5rem; color: var(--text-secondary);"></i>
+                    </div>
+                    <h4 style="margin: 0;">Dhairya Gadani</h4>
+                </div>
+                
+                <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight);">
+                        <i class="fas fa-user" style="font-size: 1.5rem; color: var(--text-secondary);"></i>
+                    </div>
+                    <h4 style="margin: 0;">Nilkanth Patadiya</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p style="color: var(--text-secondary); font-style: italic;">Thank you for visiting our website</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

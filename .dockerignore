@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+.env
+.env.example
+
+# database
+db.sqlite3
+db.sqlite3-journal
+
+# Assets that are dynamically generated
+assets/videos/cache/
+
+# Git
+.git/
+.gitignore
+
+# Ide
+.idea/
+.vscode/

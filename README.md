@@ -1,30 +1,74 @@
-# Audio Speech To Sign Language Converter
+# Audio-Speech-To-Sign-Language-Converter
 
-A Web Application which takes in live audio speech recording as input, converts it into text and displays the relevant Indian Sign Language animations.
+![CI Pipeline](https://github.com/JosephJonathanFernandes/Audio-Speech-To-Sign-Language-Converter/actions/workflows/ci.yml/badge.svg)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![Django Version](https://img.shields.io/badge/django-3.0.4%2B-green)
 
-> - Front-end using HTML,CSS,JavaScript.
-> - Speech recognition using JavaScript Web speech API.
-> - Text Preprocessing using Natural Language Toolkit(NLTK).
-> - A 3D animation of a character created
->   using Blender 3D tool.
+A powerful, accessible tool that bridges the communication gap by converting audio speech and text into visual Indian Sign Language (ISL) animations.
 
-Project Demo Video: https://youtu.be/YiHhD0QGrno
+## The Problem
 
-## Prerequisites
+Communication for the hearing impaired is a significant challenge when interacting with individuals who do not know sign language. While text-to-speech exists, speech-to-sign is far more complex due to the grammatical differences and visual nature of sign language. 
 
-> - Python >= 3.7
-> - Browser supports Web Speech API
-> - Download all required packages for python script A2SL/views.py
+## The Solution
 
-## Installation Guide:
+SignSpeak provides a seamless interface to capture voice input (or text) and instantly translate it into an animated sign language sequence. It utilizes Natural Language Processing (NLP) to parse English sentences, determine tenses, lemmatize words, and intelligently string together video assets representing ISL gestures.
 
-These instructions will get you download the project and running on your local machine for development and testing purposes.
+## Key Features
 
-### Instructions
+- **Speech Recognition**: Capture voice input directly from the browser using the Web Speech API.
+- **Intelligent NLP Engine**: Processes sentences to handle tenses, stopwords, and lemmatization using NLTK.
+- **Smooth Animation Playback**: Dynamically strings together individual sign language videos to form coherent sentences.
+- **Enterprise-Grade Architecture**: Built with Django, utilizing a modular service-oriented architecture (SOA).
+- **Secure by Default**: Compliant with GitGuardian standards, utilizing environment variables for secrets management.
 
-1. Open the Downloads folder and then open the terminal.
-2. From the terminal, run the python file using the command "python manage.py runserver ####" (#### optional port number).
-3. From the terminal, it shows localhost address (looks like this "server at http://127.0.0.1:8000/") run on browser.
-4. Sign up and start exploring.
-5. Click on mic button to record speech.
-6. Speech is going to processed and respective animated outputs are shown accordingly and it also support entered text manually.
+## Tech Stack
+
+- **Backend**: Python 3.8+, Django 3.0.4+
+- **NLP Processing**: NLTK (Natural Language Toolkit)
+- **Frontend**: HTML5, CSS3 (Custom Variables, Flexbox), Vanilla JavaScript
+- **Testing**: Pytest
+- **CI/CD**: GitHub Actions
+
+## Quick Start
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/JosephJonathanFernandes/Audio-Speech-To-Sign-Language-Converter.git
+cd Audio-Speech-To-Sign-Language-Converter
+```
+
+### 2. Set up environment variables
+```bash
+cp .env.example .env
+# Edit .env and provide your secret keys
+```
+
+### 3. Create a virtual environment and install dependencies
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 4. Run the application
+```bash
+python manage.py runserver
+```
+Visit `http://localhost:8000` in your browser.
+
+## Architecture
+
+Please see [ARCHITECTURE.md](docs/ARCHITECTURE.md) for a detailed overview of the system design.
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines on how to submit pull requests, report issues, and improve the codebase.
+
+## Security
+
+Please review our [SECURITY.md](SECURITY.md) policy for reporting vulnerabilities.
+
+## License
+
+This project is licensed under the terms of the MIT license.

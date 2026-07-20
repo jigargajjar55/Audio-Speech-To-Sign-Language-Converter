@@ -1,15 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	
-	<h2>VERSION 1.0.0</h2>
- 	<hr>
- 	<h2>CONTACT US</h2>
-	<p class="td">For any queries regarding this website contact us on following:</p>
-	<p class="td">Our Email ID:audio2sl@gmail.com</p>
-	<p class="td">Twitter handle:@audio2sl</p>
-	<p class="td">Contact number:(079)25831703</p>
- 	<hr>
-	<p class="td">Thank you, For visiting our website</p>
-
+<div class="fade-in" style="max-width: 800px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-title text-center" style="justify-content: center; flex-direction: column;">
+            <i class="fas fa-envelope-open-text" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h2>Contact Us</h2>
+        </div>
+        
+        <div class="text-center mb-4">
+            <span style="background-color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">VERSION 1.0.0</span>
+        </div>
+        
+        <div class="text-center mb-4">
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                For any queries regarding this website, feel free to reach out to us through the following channels:
+            </p>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem auto; max-width: 500px;">
+            <div class="card" style="padding: 1.5rem; margin-bottom: 0; display: flex; align-items: center; gap: 1.5rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                </div>
+                <div>
+                    <h4 style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">Email Address</h4>
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;">audio2sl@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="card" style="padding: 1.5rem; margin-bottom: 0; display: flex; align-items: center; gap: 1.5rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fab fa-twitter" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                </div>
+                <div>
+                    <h4 style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">Twitter Handle</h4>
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;">@audio2sl</p>
+                </div>
+            </div>
+            
+            <div class="card" style="padding: 1.5rem; margin-bottom: 0; display: flex; align-items: center; gap: 1.5rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-highlight); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-phone-alt" style="font-size: 1.5rem; color: var(--text-primary);"></i>
+                </div>
+                <div>
+                    <h4 style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">Contact Number</h4>
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 500;">(079) 25831703</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p style="color: var(--text-secondary); font-style: italic;">Thank you for visiting our website</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

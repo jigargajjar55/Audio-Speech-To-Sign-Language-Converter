@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: signspeak_web
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./.env:/app/.env
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./assets/videos/cache:/app/assets/videos/cache
+    restart: unless-stopped

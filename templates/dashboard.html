@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="fade-in" style="max-width: 800px; margin: 0 auto;">
+    <div class="card">
+        <div class="card-title">
+            <i class="fas fa-history"></i>
+            <h2>Your Translation Dashboard</h2>
+        </div>
+        
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+            Welcome back, {{ request.user.username }}! Here is your recent sign language translation history.
+        </p>
+
+        {% if history %}
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                {% for item in history %}
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h4 style="margin: 0 0 0.5rem 0; color: var(--text-primary);">"{{ item.input_text }}"</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">
+                                <i class="far fa-clock"></i> {{ item.created_at|date:"M d, Y H:i" }}
+                            </span>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <!-- Form to replay the animation -->
+                            <form action="{% url 'animation' %}" method="post" style="margin: 0;">
+                                {% csrf_token %}
+                                <input type="hidden" name="sen" value="{{ item.input_text }}">
+                                <button type="submit" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                                    <i class="fas fa-redo"></i> Replay
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div style="text-align: center; padding: 3rem 0; background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px dashed var(--border-color);">
+                <i class="fas fa-ghost" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--text-secondary); font-weight: 400;">No history yet.</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Start translating to see your history here!</p>
+                <a href="{% url 'animation' %}" class="btn">Start Translating</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
